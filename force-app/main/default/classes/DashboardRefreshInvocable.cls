@@ -43,7 +43,7 @@ public with sharing class DashboardRefreshInvocable {
     String paramValue = UserInfo.getOrganizationId()+''+UserInfo.getSessionId().substring(15);
 
         for(String dashId : dashboardIds) {
-            String reqUrl = '/services/data/v33.0/analytics/dashboards/' + dashId;
+            String reqUrl = '/services/data/v53.0/analytics/dashboards/' + dashId;
             Http http = new Http();
             HttpRequest req = new HttpRequest();
             req.setEndpoint(URL.getSalesforceBaseUrl().toExternalForm() + reqUrl);
